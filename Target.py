@@ -1,5 +1,8 @@
 #!/usr/python
 #-*- coding : utf-8 -*-
+
+import random as rdm
+
 """
 @project Technique d'optimisation
 @author Antoine De Gieter
@@ -25,6 +28,10 @@ class Target:
 	def init(self):
 		self._x = input("X:")
 		self._y = input("Y:")
+	
+	def initRandom(self):
+		self._x = rdm.random(0,10)
+		self._y = rdm.random(0,10)
 	
 	"""
 	Getters
