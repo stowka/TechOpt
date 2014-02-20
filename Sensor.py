@@ -40,5 +40,3 @@ class Sensor:
 
 	def _get_life(self):
 		return self._life
-
-	def
