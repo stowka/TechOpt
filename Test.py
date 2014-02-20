@@ -7,3 +7,5 @@ from Target import *
 
 field = Field()
 field.init(2, 3)
+
+map()
