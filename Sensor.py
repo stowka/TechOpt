@@ -18,7 +18,6 @@ class Sensor:
 	"""
 
 	def __init__(self):
-		print "New Sensor\n"
 		self._x = 0
 		self._y = 0
 		self._radius = 0
@@ -33,9 +32,9 @@ class Sensor:
 		self._radius = input("Radius = ")
 		self._life = input("Life = ")
 
-	def initRandom(self):
-		self._x = rdm.randint(0, 10)
-		self._y = rdm.randint(0, 10)
+	def initRandom(self, width):
+		self._x = rdm.randint(0, width)
+		self._y = rdm.randint(0, width)
 		self._radius = rdm.randint(1, 3)
 		self._life = rdm.randint(2, 6)
 

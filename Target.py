@@ -17,7 +17,6 @@ class Target:
 	"""
 
 	def __init__(self):
-		print "New target\n"
 		self._x = 0
 		self._y = 0
 
@@ -28,9 +27,9 @@ class Target:
 		self._x = input("X = ")
 		self._y = input("Y = ")
 	
-	def initRandom(self):
-		self._x = rdm.randint(0,10)
-		self._y = rdm.randint(0,10)
+	def initRandom(self, width):
+		self._x = rdm.randint(0, width)
+		self._y = rdm.randint(0, width)
 	
 	"""
 	Getters

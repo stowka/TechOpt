@@ -1,15 +1,9 @@
 #!/usr/python
 #-*- coding: utf-8 -*-
 
+from Field import *
 from Sensor import *
 from Target import *
 
-sensor = Sensor()
-sensor.initRandom()
-print sensor
-
-target = Target()
-target.init()
-print target
-target.initRandom()
-print target
+field = Field()
+field.init(2, 3)
