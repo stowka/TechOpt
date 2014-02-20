@@ -15,16 +15,22 @@ class Sensor:
 		life: battery
 	"""
 
-	def __init__(self, x, y, radius, life):
+	def __init__(self):
 		print "New Sensor\n"
-		self._x = x
-		self._y = y
-		self._radius = radius
-		self._life = life
+		self._x = 0
+		self._y = 0
+		self._radius = 0
+		self._life = 0
 		print self
 
 	def __str__(self):
 		return "[" + self._x + ", " + self._y + ", " + self._radius + "]"
+
+	def init(self):
+		self._x = input("X:")
+		self._y = input("Y:")
+		self._radius = input("Radius")
+		self._life = input("Life:")
 
 	"""
 	Getters

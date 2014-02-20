@@ -1,9 +1,13 @@
 #!/usr/python
 #-*- coding: utf-8 -*-
 
+targets = []
+sensors = []
 
-targets = input("Number of targets:")
+targets_nb = input("Number of targets:")
 print "---"
-sensors = input("Number of sensors:")
+sensors_nb = input("Number of sensors:")
+
 print "---"
 for i in range(sensors):
+	print i
