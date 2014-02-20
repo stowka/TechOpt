@@ -14,15 +14,24 @@ class Target:
 	"""
 
 	def __init__(self, x, y):
-		self._x = x
-		self._y = y
+		print "New target\n"
+		self._x = 0
+		self._y = 0
+		print self
 
 	def __str__(self):
 		return "[" + self._x + ", " + self._y + "]"
+		
+	def init(self):
+		self._x = input("X:")
+		self._y = input("Y:")
+	
+	"""
+	Getters
+	"""
 
 	def _get_x(self):
 		return self._x
 
 	def _get_y(self):
-		return self._y
-
+		return self._
