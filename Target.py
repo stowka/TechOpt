@@ -22,11 +22,11 @@ class Target:
 		self._y = 0
 
 	def __str__(self):
-		return "[" + self._x + ", " + self._y + "]"
+		return "[" + str(self._x) + ", " + str(self._y) + "]"
 		
 	def init(self):
-		self._x = input("X:")
-		self._y = input("Y:")
+		self._x = input("X = ")
+		self._y = input("Y = ")
 	
 	def initRandom(self):
 		self._x = rdm.randint(0,10)
