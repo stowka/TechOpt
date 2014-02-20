@@ -22,7 +22,7 @@ class Target:
 		self._y = 0
 
 	def __str__(self):
-		return "[" + str(self._x) + ", " + str(self._y) + "]"
+		return "[TARGET] Coordinates: [" + str(self._x) + ", " + str(self._y) + "]"
 		
 	def init(self):
 		self._x = input("X = ")
