@@ -1,6 +1,8 @@
 #!/usr/python
 #-*- coding: utf-8 -*-
 
+import random as rdm
+
 """
 @project Technique d'optimisation
 @author Antoine De Gieter
@@ -21,16 +23,21 @@ class Sensor:
 		self._y = 0
 		self._radius = 0
 		self._life = 0
-		print self
 
 	def __str__(self):
-		return "[" + self._x + ", " + self._y + ", " + self._radius + "]"
+		return "Coordinates: [" + str(self._x) + ", " + str(self._y) + ", " + str(self._radius) + "]\nLife: [" + str(self._life) + "]"
 
 	def init(self):
-		self._x = input("X:")
-		self._y = input("Y:")
-		self._radius = input("Radius")
-		self._life = input("Life:")
+		self._x = input("X = ")
+		self._y = input("Y = ")
+		self._radius = input("Radius = ")
+		self._life = input("Life = ")
+
+	def initRandom(self):
+		self._x = rdm.randint(0, 10)
+		self._y = rdm.randint(0, 10)
+		self._radius = rdm.randint(1, 3)
+		self._life = rdm.randint(2, 6)
 
 	"""
 	Getters
