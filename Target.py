@@ -20,7 +20,6 @@ class Target:
 		print "New target\n"
 		self._x = 0
 		self._y = 0
-		print self
 
 	def __str__(self):
 		return "[" + self._x + ", " + self._y + "]"
@@ -30,8 +29,8 @@ class Target:
 		self._y = input("Y:")
 	
 	def initRandom(self):
-		self._x = rdm.random(0,10)
-		self._y = rdm.random(0,10)
+		self._x = rdm.randint(0,10)
+		self._y = rdm.randint(0,10)
 	
 	"""
 	Getters

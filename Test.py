@@ -4,5 +4,5 @@
 from Sensor import *
 
 sensor = Sensor()
-sensor.init()
+sensor.initRandom()
 print sensor
