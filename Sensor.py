@@ -25,7 +25,7 @@ class Sensor:
 		self._life = 0
 
 	def __str__(self):
-		return "[SENSOR] Coordinates: [" + str(self._x) + ", " + str(self._y) + ", " + str(self._radius) + "]\nLife: [" + str(self._life) + "]"
+		return "[SENSOR] Coordinates: [" + str(self._x) + ", " + str(self._y) + ", " + str(self._radius) + "]\nLife: [" + str(self._life) + "]\n"
 
 	def init(self):
 		self._x = input("X = ")
