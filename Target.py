@@ -16,7 +16,7 @@ class Target:
 		y : position y
 	"""
 
-	def __init__(self, x, y):
+	def __init__(self):
 		print "New target\n"
 		self._x = 0
 		self._y = 0
