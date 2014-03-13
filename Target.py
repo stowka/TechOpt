@@ -12,8 +12,8 @@ import random as rdm
 class Target:
 	"""
 	Target:
-		x : position x
-		y : position y
+		x: position x
+		y: position y
 	"""
 
 	def __init__(self):
