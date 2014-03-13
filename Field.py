@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 
 import random as rdm
-from math import sqrt, pow
+from math import sqrt
 from Sensor import *
 from Target import *
 
@@ -53,7 +53,7 @@ class Field:
 		return sqrt(pow((sensor_x - target_x), 2) + pow((sensor_y - target_y), 2))
 
 	def sensorCoversTarget(self, sensor, target):
-		return sensor._get_radius() >= distanceSensorTarget(sensor, target)
+		return sensor._get_radius() >= self.distanceSensorTarget(sensor, target)
 
 	"""
 	Getters

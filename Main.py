@@ -9,5 +9,3 @@ print "---"
 sensors_nb = input("Number of sensors:")
 
 print "---"
-for i in range(sensors):
-	print i

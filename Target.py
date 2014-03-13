@@ -39,4 +39,4 @@ class Target:
 		return self._x
 
 	def _get_y(self):
-		return self._
+		return self._y
