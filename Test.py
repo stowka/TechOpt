@@ -7,7 +7,7 @@ from Target import *
 import os
 
 field = Field()
-field.init(5, 6)
+field.initRandom()
 
 
 #

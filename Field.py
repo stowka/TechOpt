@@ -38,16 +38,26 @@ class Field:
 			self._sensors[i].initRandom(self._width)
 
 	def initRandom(self):
-		self._width = rdm.randint(5, 100)
+		self._width = rdm.randint(5, 10)
 		del self._targets[:]
 		del self._sensors[:]
 		for i in range(rdm.randint(5, 10)):
 			self._targets.append(Target())
 			self._targets[i].initRandom(self._width)
 
-		for i in range(rdm.randint(5, 10)):
-			self._sensors.append(Sensor())
-			self._sensors[i].initRandom(self._width)
+		for t in self._targets:
+			print t
+			s = Sensor()
+			s.initRandom(self._width)
+			while self.sensorCoversTarget(s, t) == False:
+				print s
+				s = Sensor()
+				s.initRandom(self._width)
+			self._sensors.append(s)
+
+		# for i in range(rdm.randint(5, 10)):
+		# 	self._sensors.append(Sensor())
+		# 	self._sensors[i].initRandom(self._width)
 
 	def distanceSensorTarget(self, sensor, target):
 		sensor_x = sensor._get_x()
