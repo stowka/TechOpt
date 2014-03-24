@@ -55,4 +55,20 @@ class Program:
 
 	def solve(self, input, output):
 		os.system("glpsol -o " + str(output) + " --cpxlp " + str(input) + " --nopresol")
-		
+
+	def interpretation(self, file):
+		content = []
+		i = 0
+		with open(file, "r") as sol:
+			for line in sol:
+				content = line.split()
+				if content:
+					if content[0] == "Status:":
+						print "Pour avoir une solution de type : " + str(content[1])
+					if content[0] == "No." and content[1] == "Column":
+						i = 1
+					if content[0] == str(i):
+						if content[3] != str(0):
+							print "Il faut que le Sensor " + str(i) + " ait une duree de vie de " + str(content[3])
+						i += 1
+	
