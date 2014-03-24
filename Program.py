@@ -1,9 +1,6 @@
 #!/usr/python
 #-*- coding: utf-8 -*-
 
-from Field import *
-from Sensor import *
-from Target import *
 import os
 
 """
@@ -12,11 +9,8 @@ import os
 @author Alexis Beaujon
 """
 class Program:
-	__shared_state = {}
-	def __init__(self):
-		self.__dict__ = self.__shared_state
-
-	def generateLP(self, name):
+	@staticmethod
+	def generateLP(field, name):
 		#
 		# Generate first line
 		#
@@ -50,13 +44,15 @@ class Program:
 
 		output += "\nEND"
 
-		with open(str(name) + '.lp', 'w+') as sol:
+		with open(str(name), 'w+') as sol:
 			sol.write(output)
 
-	def solve(self, input, output):
+	@staticmethod
+	def solve(input, output):
 		os.system("glpsol -o " + str(output) + " --cpxlp " + str(input) + " --nopresol")
 
-	def interpretation(self, file):
+	@staticmethod
+	def interpretation(file):
 		content = []
 		i = 0
 		with open(file, "r") as sol:
@@ -64,11 +60,10 @@ class Program:
 				content = line.split()
 				if content:
 					if content[0] == "Status:":
-						print "Pour avoir une solution de type : " + str(content[1])
+						print "Pour avoir une solution de type " + str(content[1]) + " il faut que :"
 					if content[0] == "No." and content[1] == "Column":
 						i = 1
 					if content[0] == str(i):
 						if content[3] != str(0):
-							print "Il faut que le Sensor " + str(i) + " ait une duree de vie de " + str(content[3])
+							print "- le Sensor " + str(i) + " soit actif pendant " + str(content[3]) + "h"
 						i += 1
-	

@@ -46,11 +46,9 @@ class Field:
 			self._targets[i].initRandom(self._width)
 
 		for t in self._targets:
-			print t
 			s = Sensor()
 			s.initRandom(self._width)
 			while self.sensorCoversTarget(s, t) == False:
-				print s
 				s = Sensor()
 				s.initRandom(self._width)
 			self._sensors.append(s)
